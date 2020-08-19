@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>kungfupanda</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="shortcut icon" href="pandaa.png">
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400' rel="stylesheet" type="text/css">
+	<link href='styles.css' rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div class="container shaft">
+			<h1 style="font-family:Times New Roman">
+				CONNECT
+			</h1>
+			<h4>
+				Sign up to join CONNECT
+			</h4>
+			<form action="/signup" method="post">
+				<input type="text" name="username" placeholder="Username">
+				<input type="password" name="password" placeholder="Password">
+				<input type="text" name="type" placeholder="Professor Or Student">
+				<button class="form-control btn btn-info button btn-block" style="width:300px;margin-left:10px">
+					Sign Up
+				</button>
+			</form>
+	    <hr style="width:45%;float:left"><span style="float:left;padding-top:3px;padding-left:5px">OR</span><hr style="width:45%;float:left">		
+               <a href="/">Log In!</a>
+		</div>
+<%- include("partials/footer") %>

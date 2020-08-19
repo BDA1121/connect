@@ -1,0 +1,30 @@
+<%- include("partials/header") %>
+<div id="nameArea">
+	
+	<div style="text-align:center;margin-top:60px">Other PPl are offline wait for them to come online or use chatbox</div>
+	<div id="onlinePeople" class="container bg-info">
+ <div id="status">
+	 <form method="post" action="/add"><div style="text-align:center;">
+		  <button class="form-control btn button btn-info " style="text-align:center;">
+			 Select people and click this to invite 
+		 </button>
+		 </div>
+<% c.forEach(function(cr){ %>
+	 <% if(cr.status === "online" && cr.username !== user.username){%>
+<div class="toBeCalled">
+	<%= cr.username %>
+	 <input type="checkbox" style="width:10px" name="peoples[]" value="<%= cr.username %>">
+</div>	
+	 <%}%>
+<% }) %>
+		
+	 </form>
+	 <hr>
+	 
+</div> 
+
+</div>
+	
+	
+</div>
+<%- include("partials/footer2") %>

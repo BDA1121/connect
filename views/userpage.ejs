@@ -1,0 +1,64 @@
+<%- include("partials/header") %>
+<div class="container " id="mainInfo" style="margin-top:70px;">
+    <div class="col-12 row" >
+		<div class="col-sm-12 col-lg-6">
+		<img src="<%= user.img %>" id="dp" />	
+		</div>
+		<div class="col-sm-12 col-lg-6 row align-items-center">
+			<button class="btn btn-warning" id="uploadOne" style="margin-left:50px">
+		   upload from gallery
+		</button>
+		<button class="btn btn-success" id="takeOne" style="margin-left:50px">
+		   Take one
+		</button>
+		</div>
+	    
+	</div>
+		
+	<br>
+	<br>
+<div>
+	<h2>
+		Username   : <%= user.username%>
+	</h2>
+  	<h2>
+		Occupation: <%= user.type %>
+	</h2>
+</div>
+</div>
+
+<div id="uploadDiv" class="displayNone" >
+	<form method="POST" action="/upload" enctype="multipart/form-data">
+    
+        <h3>Select The Pic for ur dp</h3>
+    	<input type="file" name="upFile" id="imgUP"/>
+	<button class="btn btn-success" id="submitUP">
+		Submit
+	</button>
+</form>
+	<button class="btn btn-danger" id="cancel">
+		cancel
+	</button>
+</div>
+<div id="takeDiv" class="displayNone ">
+	<div style="width:460px;height:460px;background:black;margin-left:5px">
+		<video id="takePic"></video>
+	</div>
+	<canvas id="processTake" style="display:none"></canvas>
+	<i class="fas fa-circle" id="favCircle"></i>
+	<i class="fas fa-times" id="favX"></i>
+</div>
+<div id="editDiv" class="displayNone ">
+	<div style="width:460px;height:460px;background:black;margin-left:5px">
+		<img id="editPic">
+		
+	</div>
+    <i class="fas fa-times" id="favXe"></i>
+	<form method="POST" action="/uploadT" enctype="multipart/form-data">
+     <input type="file" name="tFile" style="display:none" id="imgT"/>
+	<button class="btn btn-success" id="submitT">
+		Submit
+	</button>
+</form>
+</div>
+<%- include("partials/footer") %>

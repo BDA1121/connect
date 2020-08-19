@@ -1,0 +1,52 @@
+<%- include("partials/header") %>
+
+<div id="nameSheet" class="bg-info">
+ <div id="status">
+<% c.forEach(function(cr){ %>
+<div class="names">
+	 <a href="<%= cr.username %>" class="aTag"><%= cr.username %></a> <span class="<%= cr.status%>">  <%= cr.status%></span>
+	<hr class="nameshr">
+</div>	
+<% }) %>
+</div> 
+	
+</div>
+<!-- -->
+
+<div id="chatArea">
+	<div id="chatReload">
+		<span id="spanReload">
+		<div style="width:100%,background:black" class="bg-warning">
+			<h3 style="padding-left:10px">	<%= him %> </h3>
+		</div>
+		<% chat.chat.forEach(function(chats){%>
+	<% if(chats.Author === user.username ){ %>
+	 <div class="right" style="padding-right:5px">
+		 <span class="textBack"><%= chats.Chat%></span>
+	</div>
+	<%}%>
+	<% if(chats.Author !== user.username ){ %>
+	 <div style="padding-left:5px">
+		 <span class="textBack"><%= chats.Chat%></span>
+	</div>
+	<%}%>
+	<%})%>
+	</span>
+	</div>
+		
+		
+	<form type='submit' id="form">
+		<input type="text" id='loggedinuser' value="<%= chat.users%>" style="display:none">
+		<input type="text" id='loggeduser' value="<%= user.username %>" style="display:none">
+	<input type="text" id="chatInput" name="chat" placeholder="type your message">
+		<input type="image" src="/images/send.png" id="chatSubmit" alt="Submit" style="width:30px">
+	</form>
+</div>  
+<!--
+<form method="post" action="logout" style="margin-top:70px">
+	<button class="form-control btn button btn-info btn-block" style="width:300px;height:40px;margin-left:10px">
+		logout
+	</button>
+</form>
+-->
+<%- include("partials/footer1") %>

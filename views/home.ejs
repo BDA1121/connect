@@ -1,0 +1,54 @@
+<%- include("partials/header") %>
+<!--          ROUTES TO LANDING PAGE OF EACH FEATURE          -->
+<div class="container" style="position:fixed;left:10%;width:75%;height:75%;margin-top:60px">
+	<a href="/scam/asd">
+	<div class="options orange">
+		<h1>Chat Box</h1>
+	</div>
+	</a>
+	<a href="/scam/fgh">
+	<div class="options bg-danger">	
+		<h1>Live Chat</h1>
+	</div>
+	</a>
+	<a href="/scam/jkl">
+	<div class="options bg-info">	
+		<h1>Live Group Chat</h1>
+	</div>
+	</a>
+	<a href="/scam/zxc">
+	<div class="options bg-success">	
+		<h1>Video Call</h1>
+	</div>
+	</a>
+</div>
+
+<!--          NOTIFICATIONS          -->
+<div id="notify" >
+	<span style="padding-left:30%;">Notifications</span>
+	<div id="reloadN">
+		<span id="reloadNs">
+		   <% notify.forEach(function(n){ %>
+			<% if(n.status !== "seen"){%>
+		      <div id="calling">
+				 <%= n.caller %> is inviting you from <%= n.type %><br>
+				  <% if(n.type === "callbox"){%>
+				  <a href="/scam/zxc/<%=n._id  %>" class="aTag bg-success">Accept</a><t/> <span id="decline" class="aTag bg-danger">Decline<input id="idAxios" value="<%=n._id%>" style="display:none"></span>
+				  <%}%>
+				  <% if(n.type === "livebox"){%>
+				  <a href="/scam/fgh/<%=n._id  %>" class="aTag bg-success">Accept</a><t/> <span id="decline" class="aTag bg-danger">Decline<input id="idAxios" value="<%=n._id%>" style="display:none"></span>
+				  <%}%>
+			</div>
+			<% }%>
+			<% }) %>
+			<% if(notif.status !== "seen"&& notif !== null){%>
+		      <div id="calling">
+				 <%= notif.username %> is inviting you from <%= notif.type %><br>
+				  <a href="/scam/jkl/<%=notif._id  %>" class="aTag bg-success" style="border:1px solid blue">Accept</a><t/> <span id="decline" class="aTag bg-danger">Decline<input id="idAxios" value="<%=notif._id%>" style="display:none"></span>
+				  
+			</div>
+			<% }%>
+		</span>
+	</div>
+</div>
+<%- include("partials/footer") %>

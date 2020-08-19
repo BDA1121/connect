@@ -1,0 +1,35 @@
+<%- include("partials/header") %>
+<div id="nameArea">
+	<div id="nameSheet" class="bg-info">
+ <div id="status">
+<% c.forEach(function(cr){ %>
+<div class="names">
+	 <a href="/scam/asd/<%= cr.username %>" class="aTag"><%= cr.username %></a> <span class="<%= cr.status%>">  <%= cr.status%></span>
+	<hr class="nameshr">
+</div>	
+<% }) %>
+	 
+</div> 
+	
+</div>
+</div>
+
+
+<!--<div id="chatarea">
+	<form type='submit' id="form">
+		<input type="text" name="dhanush" id='loggedinuser' value="h<%= //user.username %>" style="display:none">
+	<input type="text" id="chatInput" name="chat" placeholder="type your message">
+		<input type="image" src="images/pandaa.png" id="chatSubmit" alt="Submit" width="10px" height="20px">
+		<!-- <button class="form-control btn button btn-info btn-block" style=";width:300px;height:40px;margin-left:10px">
+	   send
+	</button> 
+	</form>
+</div>   -->
+<!--
+<form method="post" action="logout" style="margin-top:70px">
+	<button class="form-control btn button btn-info btn-block" style="width:300px;height:40px;margin-left:10px">
+		logout
+	</button>
+</form>
+-->
+<%- include("partials/footer1") %>

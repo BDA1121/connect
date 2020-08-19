@@ -1,0 +1,48 @@
+<%- include("partials/headercb") %>
+<div id="whatIf">
+	<h1>
+		Connecting<i class="fas fa-network-wired"></i>
+	</h1>
+</div>
+<div id="wait">
+	<div id="chatArea"><div id="chatAre"><div id="spam">Chat here anyways u on vid call XD</div></div> 
+	
+</div>
+	<div id="inputs">
+	
+	<span id="emojis">&#128512;</span>
+	<input id="idAxios" value="<%=notify._id%>" style="display:none">
+	<input id="texter" value="<%= user.username%>" style="display:none">
+	<input id="creator" value="<%= notify.creator%>" style="display:none">
+	<input id="calledP" value="<%= notify.username%>" style="display:none">	
+	<input id="message" type="text">
+	<input id="sendMessage" type="image" src="/images/send.png">
+		<input type="file" id="sendFile"/><br/>
+			<progress id="fileProgress" value=“1” max="100"></progress>
+			<a id="receivedFileLink"></a>
+	</div>  
+<div id="vid">
+	
+		<video  id="theirVideo" autoplay></video>
+	<div id="pause">
+		<i class="fas fa-video-slash"></i>
+	</div>
+	<div id="mute">
+		<i class="fas fa-volume-mute"></i>
+	</div>
+<div id="bwMyself">
+		B&W
+	</div>
+	<video  id="myVideo" autoplay></video>
+	
+</div>
+<div id="emojiStore">	
+	<%for(var i = 12;i<54;i++){%>
+	 <span class="addEmoji">&#1285<%=i%>;</span>
+	<%}%>
+		
+	</div>
+</div>
+
+		
+<%- include("partials/footercb") %>

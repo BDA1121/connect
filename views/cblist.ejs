@@ -1,0 +1,20 @@
+<%- include("partials/header") %>
+<div id="nameArea">
+	<div style="text-align:center;margin-top:60px">Other PPl are offline wait for them to come online or use chatbox</div>
+	<div id="onlinePeople" class="container bg-info">
+ <div id="status">
+<% c.forEach(function(cr){ %>
+	 <% if(cr.status === "online" && cr.username !== user.username){%>
+<div class="toBeCalled">
+	 <a href="zxc/<%= cr.username %>" class="aTag"><%= cr.username %></a>
+</div>	
+	 <%}%>
+<% }) %>
+	
+</div> 
+
+</div>
+	<br>
+	
+</div>
+<%- include("partials/footer1") %>

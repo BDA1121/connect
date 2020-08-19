@@ -1,0 +1,38 @@
+<%- include("partials/headerlb") %>
+<div id="whatIf">
+	<h1>
+		Connecting<i class="fas fa-network-wired"></i>
+	</h1>
+</div>
+<div id="wait">
+	<div id="chatArea"><div id="chatAre">
+	<div id="spam">one to one encrypted chat area</div>
+	</div>
+</div>
+	<div id="inputs">
+	
+	<span id="emojis">&#128512;</span>
+	<input id="texter" value="<%= user.username%>" style="display:none">
+	<input id="idAxios" value="<%=notify._id%>" style="display:none">
+	<input id="creator" value="<%= notify.creator%>" style="display:none">
+	<input id="calledP" value="<%= notify.username%>" style="display:none">	
+	<input id="message" type="text">
+	<input id="sendMessage" type="image" src="/images/send.png">
+		<input type="file" id="sendFile"/><br/>
+			<progress id="fileProgress" value=“1” max="100"></progress>
+			<a id="receivedFileLink"></a>
+	</div>  
+<div id="emojiStore">	
+	<%for(var i = 12;i<92;i++){%>
+	 <span class="addEmoji">&#1285<%=i%>;</span>
+	<%}%>
+	<%for(var i = 296;i<302;i++){%>
+	 <span class="addEmoji">&#129<%=i%>;</span>
+	<%}%>
+	<%for(var i = 14;i<28;i++){%>
+	 <span class="addEmoji">&#1293<%=i%>;</span>
+	<%}%>
+		
+	</div>
+</div>
+<%- include("partials/footerlb") %>
