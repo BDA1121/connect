@@ -1,0 +1,225 @@
+
+nav{
+	height:7%;
+}
+#uploadDiv{
+    position:fixed;
+    left:30%;
+    top:40%;
+	box-shadow:10px 10px 10px grey;
+	width:40%;
+	height:30%;
+	background:white;
+}
+#editDiv{
+    position:fixed;
+    left:30%;
+    top:15%;
+	box-shadow:10px 10px 10px grey;
+	width:470px;
+	height:490px;
+	background:white;
+	border: 1px solid black
+}
+
+#takeDiv{
+    position:fixed;
+    left:30%;
+    top:15%;
+	box-shadow:10px 10px 10px grey;
+	width:470px;
+	height:470px;
+	background:white;
+	border: 1px solid black
+}
+#favCircle{
+	color:white;
+	margin-left:210;
+	position:relative;
+	top:-50px;
+	font-size:40px
+}
+#favX{
+	color:red;
+	margin-left:420px;
+	position:relative;
+	top:-480px;
+	font-size:40px
+}
+#favXe{
+	color:red;
+	margin-left:420px;
+	position:relative;
+	top:-480px;
+	font-size:40px
+}
+#favCircle:hover{
+	border-radius: 50%;
+	border: 1px solid grey
+}
+#takePic{
+	margin-top:5px;
+	width:460px;
+	height:460px;
+}
+#editPic{
+	margin-top:px;
+	width:460px;
+	height:460px;
+}
+#dp{
+	width:400px;
+	height:400px;
+	border-radius: 50%;
+	border: 1px solid black
+}
+.right{
+	text-align: right;
+}
+#nameSheet{
+	position: fixed;
+overflow-x: hidden;
+	height:86%;
+	margin-top:52.8px;
+	width:20%;
+}
+#notify{
+	position:fixed;
+	overflow-x: hidden;
+	float:right;
+	left:85%;
+	top:7%;
+	margin-bottom:7%;
+	height:86%;
+	width:15%;
+	background:black;
+	color:pink
+}
+.options{
+	width:45%;
+	height:45%;
+	margin:2.5% 2.5% 2.5% 2.5%;
+	float:left;
+	background:orange;
+    text-align:center;
+}
+h1{
+	padding-top:20%;
+	color:black;
+}
+#chatReload{
+	position: fixed;
+overflow-x: hidden;
+	width:80%;
+	height:86%;
+	padding-bottom:45px
+}
+#chatArea{
+	position: fixed;
+overflow-x: hidden;
+	height:86%;
+	margin-top:52.8px;
+	width:80%;
+	left:20%;
+	background: rgb(208, 240, 192)
+}
+#chatInput{
+	position:absolute;
+	bottom:0px;
+	height:40px;
+	background:white;
+	width:95.2%;
+	margin-bottom:0px;
+}
+.textBack{
+	background: #4285F4;
+	border: 1px solid blue;
+	font-size:20px;
+	border-radius:15px;
+	padding-right:10px;
+	padding-left:10px;
+	
+}
+.aTag{
+	color:white;
+}
+.aTag:hover{
+	color:white;
+	text-decoration:none;
+}
+#chatSubmit{
+	position:absolute;
+	bottom:5px;
+	height:40px;
+	margin-Left:95.2%;
+	background:white;
+	margin-right:15%;
+	top:93.7%;
+	border: 1px solid black
+}
+.online{
+	color:green;
+}
+.offline{
+	color:red;
+}
+
+.names{
+	font-size:20px;
+	color:white;
+}
+.nameshr{
+	color:black;
+}
+.button{
+	width:300;
+	height :25px;
+}
+#onlinePeople{
+	margin-top:70px;
+}
+.toBeCalled{
+	width:20%;
+	height:10%;
+	margin:2.5% 2.5% 2.5% 2.5%;
+	float:left;
+	padding-top:20px;
+	background:orange;
+    text-align:center;
+}
+.bottom{
+	position:absolute;
+	bottom:0px;
+	text-align:center;
+	width:100%;
+	height:7%;
+	color:white;
+	background:black;
+	margin-bottom:0px;
+}
+.display{
+	display:visible;
+}
+.displayNone{
+	display:none;
+}
+.haft{
+	text-align:center;
+	margin-top:50px;
+  width: 360px;
+  height: 340px;
+	box-shadow: 5px 5px rgba(0,0,0, 0.3);
+  text-align:center;
+  border: 5px  solid;
+  border-image: linear-gradient(to right, grey , rgb(91, 192, 222) ) 5; ;  
+}
+.shaft{
+	text-align:center;
+	margin-top:50px;
+  width: 360px;
+  height: 350px;
+	box-shadow: 5px 5px rgba(0,0,0, 0.3);
+  text-align:center;
+  border: 5px  solid;
+  border-image: linear-gradient(to right, grey , rgb(91, 192, 222) ) 5; ;  
+}
